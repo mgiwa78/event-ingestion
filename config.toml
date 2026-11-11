@@ -1,0 +1,26 @@
+# HTTP API (JSON)
+[http]
+bind = "0.0.0.0:8080"
+
+# Raw TCP, one JSON event per line
+[tcp]
+bind = "0.0.0.0:9090"
+max_connections = 1024
+
+# Queue + workers. Drop capacity if you want to feel backpressure sooner.
+[pipeline]
+channel_capacity = 10000
+worker_count = 4
+enqueue_timeout_ms = 100
+
+# Local append-only files
+[wal]
+dir = "./data/wal"
+batch_max_events = 128
+batch_max_wait_ms = 50
+fsync_every_batches = 8
+
+[limits]
+max_payload_bytes = 65536
+max_batch_size = 1000
+max_source_len = 128

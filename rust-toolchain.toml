@@ -1,0 +1,4 @@
+# GNU target so we can build with MinGW when MSVC link.exe isn't around.
+# Switch to plain "stable" if you've got Visual Studio C++ tools installed.
+[toolchain]
+channel = "stable-x86_64-pc-windows-gnu"

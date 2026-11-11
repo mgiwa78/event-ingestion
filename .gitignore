@@ -1,0 +1,13 @@
+/target/
+/data/
+**/*.rs.bk
+.idea/
+.vscode/
+*.swp
+scripts/
+.DS_Store
+node_modules/
+Learning.md
+/docs
+README.md
+Rust_Study_Guide_Ownership_Borrowing_Tokio.docx
